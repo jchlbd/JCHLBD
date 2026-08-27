@@ -27,6 +27,7 @@ const DEPARTMENTS = [
   { id: "uro",         name: "ইউরোলজি",               icon: "" },
   { id: "gynae",       name: "স্ত্রীরোগ ও প্রসূতি",    icon: "" },
   { id: "ortho",       name: "অর্থোপেডিক্স",           icon: "" },
+  { id: "physical-medicine",    name: "ফিজিক্যাল মেডিসিন",           icon: "" },
   { id: "dermo",       name: "চর্মরোগ",          icon: "" },
   { id: "endo",        name: "এন্ডোক্রাইনোলজি",       icon: "" },
   { id: "pediatric",   name: "শিশু",             icon: "" },
@@ -49,7 +50,7 @@ const DOCTORS = [
   name: "অধ্যাপক ডাঃ খাজা মাসুম কবীর",
   photo: "assests/d01.png",
   designation: "প্রফেসর (সার্জারি)",
-  departments: "surgery",
+  departments: ["surgery", "uro"],
   degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি)
 এমএস (ইউরোলজি)
 অধ্যাপক (সার্জাারি)
@@ -242,7 +243,7 @@ const DOCTORS = [
   name: "ডাঃ মোঃ মঞ্জুরুল হক",
   photo: "assests/d07.png",
   designation: "সহকারী অধ্যাপক (গ্যাস্ট্রোএন্টারোলজি)",
-  departments: ["gastro", "hepato"],
+  departments: "gastro",
   degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
 এমডি (গ্যাস্ট্রোএন্টারোলজি), বিএসএমএমইউ
 এমএসিজি (আমেরিকা), এমআরসিপি (পার্ট-১) ইউকে
@@ -367,7 +368,7 @@ const DOCTORS = [
     "dis349", "dis350", "dis351", "dis352", "dis353", "dis354", "dis355", "dis356", "dis357", "dis358", "dis359", "dis360", "dis361", "dis362", "dis363", "dis364", "dis365", "dis366", "dis367", "dis368", "dis369", "dis370", "dis371", "dis372", "dis373", "dis374", "dis375", "dis376", "dis377", "dis378"],
   schedule: [
     { day: "শনি - বৃহস্পতিবার", time: "সন্ধ্যা ৭ টা – রাত ৯ টা পর্যন্ত" },
-    { day: "শুক্রবার", time: "বিকাল ৫ টা – রাত ৮ টা পর্যন্ত" }
+    { day: "শুক্রবার", time: "বিকাল ৬ টা – রাত ৮ টা পর্যন্ত" }
   ],
   chamber: "৫০১",
   visitFee: {
@@ -781,7 +782,7 @@ tests: [
   name: "ডাঃ মোঃ ওয়েস করনী",
   photo: "assests/d27.png",
   designation: "সহকারী অধ্যাপক (প্যাথলজি)",
-  departments: "pathology",
+  departments: "",
   degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
 এমডি (প্যাথলজি)
 সহকারী অধ্যাপক (প্যাথলজি)
@@ -842,7 +843,86 @@ tests: [
   old: "৫০০",
   note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
 },
-}
+},
+
+{
+  id: "d30",
+  name: "ডাঃ মোঃ মাইনুল ইসলাম",
+  photo: "assests/d30.png",
+  designation: "কনসালটেন্ট (মেডিসিন)",
+  departments: "hepato",
+  degrees: `এমবিবিএস (ঢাকা), এমসিপিএস (মেডিসিন)
+সিসিডি, ইডিসি (বার্ডেম)
+এমডি (নিউরোমেডিসিন), রেসিডেন্ট, এফসিপিএস (হেপাটোলজি), থিসিস
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল।
+কনসালটেন্ট (মেডিসিন)
+বিএমডিসি রেজিঃ নং: A-75232`,
+  diseases: [
+    "dis148", "dis149", "dis150", "dis151", "dis152", "dis153", "dis154", "dis155", "dis156", "dis157", "dis158", "dis159", "dis160", "dis161", "dis162", "dis163", "dis164", "dis165", "dis166", "dis167", "dis168", "dis169", "dis170", "dis171", "dis172"],
+  schedule: [
+    { day: "বৃহস্পতিবার", time: "দুপুর ৩ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "২১০",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+},
+
+{
+  id: "d31",
+  name: "ডাঃ মোঃ ফেরদৌসুর রহমান আল-মাহমুদ",
+  photo: "assests/d31.png",
+  designation: "বাত, ব্যথা, প্যারালাইসিস ও রিউম্যাটোলজী বিশেষজ্ঞ",
+  departments: "physical-medicine",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এফসিপিএস (ফিজিক্যাল মেডিসিন)
+সহযোগী অধ্যাপক`,
+  diseases: ["dis511", "dis512", "dis513", "dis514", "dis515", "dis516", "dis517", "dis518", "dis519", "dis520", "dis521", "dis522", "dis523", "dis524", "dis525", "dis526", "dis527", "dis528", "dis529", "dis530", "dis531", "dis532", "dis533", "dis534", "dis535", "dis536", "dis537", "dis538", "dis539", "dis540", "dis541", "dis542", "dis543", "dis544", "dis545", "dis546", "dis547", "dis548", "dis549", "dis550", "dis551", "dis552", "dis553", "dis554", "dis555", "dis556", "dis557", "dis558", "dis559", "dis560", "dis561", "dis562", "dis563", "dis564", "dis565", "dis566", "dis567", "dis568", "dis569", "dis570"],
+  schedule: [
+    { day: "বুধবার", time: "বিকাল ৩ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "২০১",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+},
+
+{
+  id: "d32",
+  name: "ডাঃ রুবীনা ইয়াসমিন",
+  photo: "assests/d32.jpg",
+  designation: "প্যাথলজি বিশেষজ্ঞ",
+  departments: "pathology",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি - প্যাথলজি (বিএসএমএমইউ)
+হিস্টো ও সাইটো প্যাথলজিস্ট
+সহযোগী অধ্যাপক ও বিভাগীয় প্রধান (প্যাথলজি বিভাগ)
+ময়মনসিংহ মেডিকেল কলেজ`,
+  diseases: 
+  ["dis"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১১ টা – বিকাল ৫ টা পর্যন্ত" }
+  ],
+  tests: [
+    { name: "FNAC", price: "" },
+    { name: "Core Biopsy", price: "" },
+    { name: "Pap's Smear", price: "" },
+    { name: "Fluid Cytology", price: "" },
+    { name: "Pleural Fluid Cytology", price: "" },
+    { name: "Ascitic Fluid Cytology", price: "" },
+    { name: "Histopathology", price: "" },
+    { name: "Pus for Cytology", price: "" },
+    { name: "CT Guided FNAC", price: "" },
+    { name: "USG Guided FNAC", price: "" },
+    { name: "Synovial Fluid for Cytology", price: "" },
+    { name: "Peritoneal Fluid Cytology", price: "" },
+  ],
+  chamber: "২০৭",
+},
 ];
 
 // ─────────────────────────────────────────────
@@ -1396,6 +1476,68 @@ const DISEASES = [
   { id:"dis508", name:"ব্র্যাঙ্কিয়াল ক্লেফট সিস্ট", nameEn:"Branchial Cleft Cyst", bodyPart:"child-surgery", department:"child-surgery", keywords:["ব্র্যাঙ্কিয়াল ক্লেফট সিস্ট","branchial cleft cyst","গলা","সিস্ট"] },
   { id:"dis509", name:"পোড়া ক্ষত", nameEn:"Burn Injury", bodyPart:"child-surgery", department:"child-surgery", keywords:["পোড়া ক্ষত","burn injury","burn","দগ্ধ"] },
   { id:"dis510", name:"জন্মগত ত্রুটি সংশোধন", nameEn:"Congenital Surgical Anomalies", bodyPart:"child-surgery", department:"child-surgery", keywords:["জন্মগত ত্রুটি","congenital surgical anomalies","birth defect","শিশু সার্জারি"] },
+
+  // ── রিউম্যাটোলজি – rheumatology──
+  { id:"dis511", name:"কোমর ব্যথা", nameEn:"Low Back Pain", bodyPart:"spine", department:"physical-medicine", keywords:["কোমর ব্যথা","low back pain","back pain","কোমর","ব্যথা","spine","physical medicine","rheumatology"] },
+  { id:"dis512", name:"ঘাড় ব্যথা", nameEn:"Neck Pain", bodyPart:"neck", department:"physical-medicine", keywords:["ঘাড় ব্যথা","neck pain","ঘাড়","ব্যথা","spine","physical medicine","rheumatology"] },
+  { id:"dis513", name:"মেরুদণ্ডের ব্যথা", nameEn:"Spinal Pain", bodyPart:"spine", department:"physical-medicine", keywords:["মেরুদণ্ডের ব্যথা","spinal pain","spine pain","মেরুদণ্ড","ব্যথা","physical medicine"] },
+  { id:"dis514", name:"সার্ভাইক্যাল স্পন্ডাইলোসিস", nameEn:"Cervical Spondylosis", bodyPart:"neck", department:"physical-medicine", keywords:["সার্ভাইক্যাল স্পন্ডাইলোসিস","cervical spondylosis","ঘাড়","মেরুদণ্ড","neck pain","spine"] },
+  { id:"dis515", name:"লাম্বার স্পন্ডাইলোসিস", nameEn:"Lumbar Spondylosis", bodyPart:"spine", department:"physical-medicine", keywords:["লাম্বার স্পন্ডাইলোসিস","lumbar spondylosis","কোমর","মেরুদণ্ড","low back pain","spine"] },
+  { id:"dis516", name:"স্লিপড ডিস্ক", nameEn:"Slipped Disc / Herniated Disc", bodyPart:"spine", department:"physical-medicine", keywords:["স্লিপড ডিস্ক","slipped disc","herniated disc","disc prolapse","কোমর","মেরুদণ্ড","back pain"] },
+  { id:"dis517", name:"সায়াটিকা", nameEn:"Sciatica", bodyPart:"spine", department:"physical-medicine", keywords:["সায়াটিকা","sciatica","কোমর","পায়ে ব্যথা","nerve pain","back pain","spine"] },
+  { id:"dis518", name:"সার্ভাইক্যাল রেডিকুলোপ্যাথি", nameEn:"Cervical Radiculopathy", bodyPart:"neck", department:"physical-medicine", keywords:["সার্ভাইক্যাল রেডিকুলোপ্যাথি","cervical radiculopathy","ঘাড়","হাত অবশ","nerve pain","neck pain"] },
+  { id:"dis519", name:"লাম্বার রেডিকুলোপ্যাথি", nameEn:"Lumbar Radiculopathy", bodyPart:"spine", department:"physical-medicine", keywords:["লাম্বার রেডিকুলোপ্যাথি","lumbar radiculopathy","কোমর","পায়ে ব্যথা","nerve pain","sciatica"] },
+  { id:"dis520", name:"স্পাইনাল স্টেনোসিস", nameEn:"Spinal Stenosis", bodyPart:"spine", department:"physical-medicine", keywords:["স্পাইনাল স্টেনোসিস","spinal stenosis","মেরুদণ্ড","কোমর ব্যথা","back pain","spine"] },
+  { id:"dis521", name:"মেরুদণ্ডের আঘাত", nameEn:"Spinal Injury", bodyPart:"spine", department:"physical-medicine", keywords:["মেরুদণ্ডের আঘাত","spinal injury","spine injury","back pain","আঘাত","rehabilitation"] },
+  { id:"dis522", name:"কোমরের মাংসপেশির টান", nameEn:"Lumbar Muscle Strain", bodyPart:"lower-back", department:"physical-medicine", keywords:["কোমরের মাংসপেশির টান","lumbar muscle strain","back pain","muscle strain","কোমর","pain"] },
+  { id:"dis523", name:"ঘাড়ের মাংসপেশির টান", nameEn:"Neck Muscle Strain", bodyPart:"neck", department:"physical-medicine", keywords:["ঘাড়ের মাংসপেশির টান","neck muscle strain","neck pain","muscle strain","ঘাড়","pain"] },
+  { id:"dis524", name:"ফ্রোজেন শোল্ডার", nameEn:"Frozen Shoulder", bodyPart:"shoulder", department:"physical-medicine", keywords:["ফ্রোজেন শোল্ডার","frozen shoulder","কাঁধ","shoulder pain","joint pain","physical medicine"] },
+  { id:"dis525", name:"কাঁধের ব্যথা", nameEn:"Shoulder Pain", bodyPart:"shoulder", department:"physical-medicine", keywords:["কাঁধের ব্যথা","shoulder pain","কাঁধ","joint pain","muscle pain","pain"] },
+  { id:"dis526", name:"রোটেটর কাফ ইনজুরি", nameEn:"Rotator Cuff Injury", bodyPart:"shoulder", department:"physical-medicine", keywords:["রোটেটর কাফ ইনজুরি","rotator cuff injury","shoulder injury","কাঁধ","sports injury","rehabilitation"] },
+  { id:"dis527", name:"টেনিস এলবো", nameEn:"Tennis Elbow", bodyPart:"elbow", department:"physical-medicine", keywords:["টেনিস এলবো","tennis elbow","elbow pain","কনুই","sports injury","pain"] },
+  { id:"dis528", name:"গলফারস এলবো", nameEn:"Golfer's Elbow", bodyPart:"elbow", department:"physical-medicine", keywords:["গলফারস এলবো","golfer's elbow","elbow pain","কনুই","sports injury","tendon"] },
+  { id:"dis529", name:"কবজির ব্যথা", nameEn:"Wrist Pain", bodyPart:"wrist", department:"physical-medicine", keywords:["কবজির ব্যথা","wrist pain","কবজি","joint pain","hand pain","physical medicine"] },
+  { id:"dis530", name:"কার্পাল টানেল সিনড্রোম", nameEn:"Carpal Tunnel Syndrome", bodyPart:"wrist", department:"physical-medicine", keywords:["কার্পাল টানেল সিনড্রোম","carpal tunnel syndrome","wrist pain","হাত অবশ","nerve compression","nerve pain"] },
+  { id:"dis531", name:"হাতের মাংসপেশির টান", nameEn:"Muscle Strain", bodyPart:"arm", department:"physical-medicine", keywords:["হাতের মাংসপেশির টান","muscle strain","muscle pain","হাত","pain","sports injury"] },
+  { id:"dis532", name:"পেশিতে ব্যথা", nameEn:"Myalgia", bodyPart:"muscle", department:"physical-medicine", keywords:["পেশিতে ব্যথা","myalgia","muscle pain","মাংসপেশি","ব্যথা","pain"] },
+  { id:"dis533", name:"মায়োফ্যাসিয়াল পেইন সিনড্রোম", nameEn:"Myofascial Pain Syndrome", bodyPart:"muscle", department:"physical-medicine", keywords:["মায়োফ্যাসিয়াল পেইন সিনড্রোম","myofascial pain syndrome","muscle pain","মাংসপেশি","trigger point","chronic pain"] },
+  { id:"dis534", name:"ফাইব্রোমায়ালজিয়া", nameEn:"Fibromyalgia", bodyPart:"general", department:"physical-medicine", keywords:["ফাইব্রোমায়ালজিয়া","fibromyalgia","সারা শরীরে ব্যথা","muscle pain","chronic pain","rheumatology"] },
+  { id:"dis535", name:"হাঁটু ব্যথা", nameEn:"Knee Pain", bodyPart:"knee", department:"physical-medicine", keywords:["হাঁটু ব্যথা","knee pain","হাঁটু","joint pain","arthritis","physical medicine"] },
+  { id:"dis536", name:"অস্টিওআর্থ্রাইটিস", nameEn:"Osteoarthritis", bodyPart:"joint", department:"physical-medicine", keywords:["অস্টিওআর্থ্রাইটিস","osteoarthritis","arthritis","joint pain","হাঁটু","জয়েন্ট","rheumatology"] },
+  { id:"dis537", name:"রিউমাটয়েড আর্থ্রাইটিস", nameEn:"Rheumatoid Arthritis", bodyPart:"joint", department:"physical-medicine", keywords:["রিউমাটয়েড আর্থ্রাইটিস","rheumatoid arthritis","arthritis","joint pain","জয়েন্ট","rheumatology","inflammation"] },
+  { id:"dis538", name:"জয়েন্টের ব্যথা", nameEn:"Joint Pain", bodyPart:"joint", department:"physical-medicine", keywords:["জয়েন্টের ব্যথা","joint pain","জয়েন্ট","ব্যথা","arthritis","rheumatology"] },
+  { id:"dis539", name:"জয়েন্ট শক্ত হয়ে যাওয়া", nameEn:"Joint Stiffness", bodyPart:"joint", department:"physical-medicine", keywords:["জয়েন্ট শক্ত হয়ে যাওয়া","joint stiffness","জয়েন্ট","arthritis","joint pain","rheumatology"] },
+  { id:"dis540", name:"গোড়ালির ব্যথা", nameEn:"Ankle Pain", bodyPart:"ankle", department:"physical-medicine", keywords:["গোড়ালির ব্যথা","ankle pain","গোড়ালি","joint pain","foot pain","physical medicine"] },
+  { id:"dis541", name:"পায়ের পাতার ব্যথা", nameEn:"Foot Pain", bodyPart:"foot", department:"physical-medicine", keywords:["পায়ের পাতার ব্যথা","foot pain","পায়ের ব্যথা","heel pain","joint pain","physical medicine"] },
+  { id:"dis542", name:"হিল পেইন", nameEn:"Heel Pain", bodyPart:"heel", department:"physical-medicine", keywords:["হিল পেইন","heel pain","গোড়ালির ব্যথা","পায়ের ব্যথা","foot pain","pain"] },
+  { id:"dis543", name:"প্লান্টার ফ্যাসাইটিস", nameEn:"Plantar Fasciitis", bodyPart:"foot", department:"physical-medicine", keywords:["প্লান্টার ফ্যাসাইটিস","plantar fasciitis","heel pain","foot pain","পায়ের ব্যথা"] },
+  { id:"dis544", name:"স্পোর্টস ইনজুরি", nameEn:"Sports Injury", bodyPart:"musculoskeletal", department:"physical-medicine", keywords:["স্পোর্টস ইনজুরি","sports injury","sports","আঘাত","muscle injury","joint injury","rehabilitation"] },
+  { id:"dis545", name:"লিগামেন্ট ইনজুরি", nameEn:"Ligament Injury", bodyPart:"joint", department:"physical-medicine", keywords:["লিগামেন্ট ইনজুরি","ligament injury","joint injury","sports injury","আঘাত","rehabilitation"] },
+  { id:"dis546", name:"টেন্ডন ইনজুরি", nameEn:"Tendon Injury", bodyPart:"tendon", department:"physical-medicine", keywords:["টেন্ডন ইনজুরি","tendon injury","tendon","sports injury","muscle injury","pain"] },
+  { id:"dis547", name:"টেন্ডিনাইটিস", nameEn:"Tendinitis", bodyPart:"tendon", department:"physical-medicine", keywords:["টেন্ডিনাইটিস","tendinitis","tendon pain","tendon","joint pain","inflammation"] },
+  { id:"dis548", name:"বারসাইটিস", nameEn:"Bursitis", bodyPart:"joint", department:"physical-medicine", keywords:["বারসাইটিস","bursitis","joint pain","কাঁধ","হাঁটু","inflammation"] },
+  { id:"dis549", name:"মাংসপেশির ইনজুরি", nameEn:"Muscle Injury", bodyPart:"muscle", department:"physical-medicine", keywords:["মাংসপেশির ইনজুরি","muscle injury","muscle pain","sports injury","আঘাত","rehabilitation"] },
+  { id:"dis550", name:"স্নায়ুর আঘাত", nameEn:"Nerve Injury", bodyPart:"nerve", department:"physical-medicine", keywords:["স্নায়ুর আঘাত","nerve injury","nerve pain","স্নায়ু","অবশ","rehabilitation"] },
+  { id:"dis551", name:"স্ট্রোক-পরবর্তী পক্ষাঘাত", nameEn:"Post-Stroke Paralysis", bodyPart:"brain", department:"physical-medicine", keywords:["স্ট্রোক-পরবর্তী পক্ষাঘাত","post-stroke paralysis","stroke","পক্ষাঘাত","paralysis","rehabilitation"] },
+  { id:"dis552", name:"হেমিপ্লেজিয়া", nameEn:"Hemiplegia", bodyPart:"brain", department:"physical-medicine", keywords:["হেমিপ্লেজিয়া","hemiplegia","পক্ষাঘাত","paralysis","stroke","rehabilitation"] },
+  { id:"dis553", name:"প্যারাপ্লেজিয়া", nameEn:"Paraplegia", bodyPart:"spinal-cord", department:"physical-medicine", keywords:["প্যারাপ্লেজিয়া","paraplegia","পক্ষাঘাত","spinal cord","paralysis","rehabilitation"] },
+  { id:"dis554", name:"সেরিব্রাল পালসি", nameEn:"Cerebral Palsy", bodyPart:"brain", department:"physical-medicine", keywords:["সেরিব্রাল পালসি","cerebral palsy","শিশু","পক্ষাঘাত","movement disorder","rehabilitation"] },
+  { id:"dis555", name:"স্পাইনাল কর্ড ইনজুরি", nameEn:"Spinal Cord Injury", bodyPart:"spinal-cord", department:"physical-medicine", keywords:["স্পাইনাল কর্ড ইনজুরি","spinal cord injury","মেরুদণ্ড","পক্ষাঘাত","paralysis","rehabilitation"] },
+  { id:"dis556", name:"পেরিফেরাল নিউরোপ্যাথি", nameEn:"Peripheral Neuropathy", bodyPart:"nerve", department:"physical-medicine", keywords:["পেরিফেরাল নিউরোপ্যাথি","peripheral neuropathy","nerve pain","অবশ","ঝিনঝিনি","স্নায়ু"] },
+  { id:"dis557", name:"ডায়াবেটিক নিউরোপ্যাথি", nameEn:"Diabetic Neuropathy", bodyPart:"nerve", department:"physical-medicine", keywords:["ডায়াবেটিক নিউরোপ্যাথি","diabetic neuropathy","diabetes","nerve pain","অবশ","ঝিনঝিনি"] },
+  { id:"dis558", name:"ব্যালান্স ও হাঁটার সমস্যা", nameEn:"Balance & Gait Disorder", bodyPart:"lower-limb", department:"physical-medicine", keywords:["ব্যালান্স সমস্যা","হাঁটার সমস্যা","balance disorder","gait disorder","walking problem","rehabilitation"] },
+  { id:"dis559", name:"দীর্ঘস্থায়ী ব্যথা", nameEn:"Chronic Pain", bodyPart:"general", department:"physical-medicine", keywords:["দীর্ঘস্থায়ী ব্যথা","chronic pain","ব্যথা","pain management","muscle pain","joint pain","physical medicine"] },
+  { id:"dis560", name:"অপারেশন-পরবর্তী পুনর্বাসন", nameEn:"Post-operative Rehabilitation", bodyPart:"general", department:"physical-medicine", keywords:["অপারেশন-পরবর্তী পুনর্বাসন","post-operative rehabilitation","rehabilitation","physiotherapy","recovery","physical medicine"] },
+  { id:"dis561", name:"অঙ্গচ্ছেদ-পরবর্তী পুনর্বাসন", nameEn:"Post-Amputation Rehabilitation", bodyPart:"limb", department:"physical-medicine", keywords:["অঙ্গচ্ছেদ-পরবর্তী পুনর্বাসন","post-amputation rehabilitation","amputation","prosthetic","rehabilitation","physiotherapy"] },
+  { id:"dis562", name:"কৃত্রিম অঙ্গ ব্যবহারের পুনর্বাসন", nameEn:"Prosthetic Rehabilitation", bodyPart:"limb", department:"physical-medicine", keywords:["কৃত্রিম অঙ্গ","prosthetic rehabilitation","prosthesis","rehabilitation","walking","physiotherapy"] },
+  { id:"dis563", name:"বার্ন-পরবর্তী পুনর্বাসন", nameEn:"Post-Burn Rehabilitation", bodyPart:"skin", department:"physical-medicine", keywords:["বার্ন-পরবর্তী পুনর্বাসন","post-burn rehabilitation","burn","rehabilitation","scar","physiotherapy"] },
+  { id:"dis564", name:"মেরুদণ্ডের অপারেশন-পরবর্তী পুনর্বাসন", nameEn:"Post-Spinal Surgery Rehabilitation", bodyPart:"spine", department:"physical-medicine", keywords:["মেরুদণ্ডের অপারেশন-পরবর্তী পুনর্বাসন","post-spinal surgery rehabilitation","spine surgery","back pain","rehabilitation","physiotherapy"] },
+  { id:"dis565", name:"জয়েন্ট প্রতিস্থাপন-পরবর্তী পুনর্বাসন", nameEn:"Post-Joint Replacement Rehabilitation", bodyPart:"joint", department:"physical-medicine", keywords:["জয়েন্ট প্রতিস্থাপন-পরবর্তী পুনর্বাসন","post-joint replacement rehabilitation","joint replacement","knee replacement","hip replacement","rehabilitation"] },
+  { id:"dis566", name:"হাঁটার সমস্যা", nameEn:"Gait Disorder", bodyPart:"lower-limb", department:"physical-medicine", keywords:["হাঁটার সমস্যা","gait disorder","walking problem","walking difficulty","balance","rehabilitation"] },
+  { id:"dis567", name:"চলাফেরার অক্ষমতা", nameEn:"Mobility Impairment", bodyPart:"general", department:"physical-medicine", keywords:["চলাফেরার অক্ষমতা","mobility impairment","mobility problem","walking difficulty","movement disorder","rehabilitation"] },
+  { id:"dis568", name:"পেশির দুর্বলতা", nameEn:"Muscle Weakness", bodyPart:"muscle", department:"physical-medicine", keywords:["পেশির দুর্বলতা","muscle weakness","muscle","weakness","movement","rehabilitation"] },
+  { id:"dis569", name:"হাত-পা অবশ হওয়া", nameEn:"Limb Numbness", bodyPart:"limb", department:"physical-medicine", keywords:["হাত-পা অবশ","limb numbness","অবশ","ঝিনঝিনি","nerve pain","neuropathy"] },
+  { id:"dis570", name:"নার্ভ কমপ্রেশন", nameEn:"Nerve Compression", bodyPart:"nerve", department:"physical-medicine", keywords:["নার্ভ কমপ্রেশন","nerve compression","nerve pain","স্নায়ু","অবশ","carpal tunnel","radiculopathy"] },
 ];
 
 // ─────────────────────────────────────────────
