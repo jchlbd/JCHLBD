@@ -23,6 +23,7 @@ const DEPARTMENTS = [
   { id: "pulmo",       name: "বক্ষব্যাধি",       icon: "" },
   { id: "gastro",      name: "গ্যাস্ট্রোএন্টারোলজি",   icon: "" },
   { id: "hepato",      name: "হেপাটোলজি (লিভার)",     icon: "" },
+  { id: "oncology",     name: "ক্যান্সার",         icon: "" },
   { id: "nephro",      name: "নেফ্রোলজি (কিডনি)",     icon: "" },
   { id: "uro",         name: "ইউরোলজি",               icon: "" },
   { id: "gynae",       name: "স্ত্রীরোগ ও প্রসূতি",    icon: "" },
@@ -1058,6 +1059,26 @@ tests: [
     { day: "বৃহস্পতিবার ও শুক্রবার", time: "সকাল ১০ টা – রাত ৮ টা পর্যন্ত" }
   ],
   chamber: "২১৫",
+},
+
+{
+  id: "d39",
+  name: "ডাঃ মোহাম্মদ মাহমুদুর রহমান",
+  photo: "assests/d39.png",
+  designation: "ক্যান্সার রোগ বিশেষজ্ঞ",
+  departments: "oncology",
+  degrees: ``,
+  diseases: [
+    "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১০:০০ টা – বিকাল ৪:৩০ টা" }
+  ],
+  chamber: "৫০১",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
 },
 ];
 
