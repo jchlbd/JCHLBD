@@ -1,9 +1,4 @@
-## যেকোন তথ্য ও সিরিয়ালের জন্য: 
-☎ 09644 305 600
-📞 01733 305 600
 
-🏥 জামালপুর সেন্ট্রাল হাসপাতাল লিমিটেড
-আমলাপাড়া, জামালপুর। 👋
 
 <!--
 **jchlbd/JCHLBD** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
